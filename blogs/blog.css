@@ -1,0 +1,102 @@
+html::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://usagif.com/wp-content/uploads/gifs/starfall-gif-46.gif');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1;
+}
+html {
+    color: #A3B9D1;
+    background-color: #313244;
+    background-size: cover;
+    justify-content: center;
+    height: 100%;
+    align-content: center;
+    margin: 0;
+    font-family: fantasy;
+}
+::-webkit-scrollbar {
+    width: 0px;
+  }
+div.blog {
+    background-color: #003366;
+    margin: auto;
+    padding: 10px;
+    width: 70%;
+    text-align: center;
+    border-style: outset;
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: #003153;
+    opacity: 70%;
+    font-size: large;
+}
+h1 {
+    text-shadow: 2px 2px 5px #483D8B;
+    font-style: oblique;
+    
+}
+hr {
+    border-width: 2px 0 0 0;
+    border-color: #B0C4DE;
+}
+img.left {
+    padding: 5px;
+    width: 150px;
+    float: left;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: #003153;
+}
+div.textcontainer{
+    padding: 10px;
+    text-align: justify;
+}
+footer {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-size: x-large;
+}
+
+ul.horizontal-list {
+    list-style: none;
+}
+
+ul.horizontal-list li {
+    display: inline-block;
+    padding: 0 0.5rem;
+}
+ul.horizontal-list li:not(:last-child) {
+    border-right: 1px solid #002147;
+}
+a {
+    color: #A3B9D1;
+}
+a:hover {
+    text-shadow: 1px 1px 2px #002147, 0 0 25px blue, 0 0 5px cyan;
+}
+a.list {
+    color: #A3B9D1;
+    text-decoration: none;
+}
+a.list:hover {
+    text-shadow: 1px 1px 2px #002147, 0 0 25px blue, 0 0 5px cyan;
+    border-style: outset;
+}
+::-moz-selection { /* Code for Firefox */
+    color: #0b236d;
+    background: #c2a5c3;
+}
+  
+::selection {
+    color: #0b236d;
+    background: #c2a5c3;
+}
+
