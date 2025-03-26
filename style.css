@@ -158,3 +158,13 @@ pre {
     border-width: 3px;
     background-color: #002147;
 }
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #01134e;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0b236d;
+    scrollbar-shadow-color: #A3B9D1;
+  }
