@@ -149,7 +149,6 @@ img.backright {
 }
 pre code {
     display: block;
-    white-space: nowrap;
     overflow-x: auto;
     word-wrap: break-word;
     -webkit-overflow-scrolling: touch;

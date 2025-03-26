@@ -25,7 +25,7 @@ Delete pre-mount snapshots:
 
 ```
 sudo umount /.snapshots
-sudo umount /.snapshots
+sudo rm -r /.snapshots
 ```
 
 This is needed because it will allow the user to use Snapper to make a new config.
