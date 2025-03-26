@@ -127,12 +127,12 @@ div.blog {
     background-color: #003366;
     margin: auto;
     padding: 10px;
-    width: 70%;
+    width: 75%;
     text-align: center;
     border-style: outset;
     border-width: 5px;
     border-radius: 5px;
     border-color: #003153;
-    opacity: 70%;
+    opacity: 75%;
     font-size: large;
 }
