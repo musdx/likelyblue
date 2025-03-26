@@ -19,7 +19,7 @@ html {
     height: 100%;
     align-content: center;
     margin: 0;
-    font-family: Courier;
+    font-family: Gill Sans, sans-serif;
 }
 div.container {
     background-color: #003366;
@@ -43,7 +43,7 @@ hr {
     border-width: 2px 0 0 0;
     border-color: #B0C4DE;
 }
-img {
+img.left {
     padding: 5px;
     width: 150px;
     float: left;
@@ -121,4 +121,18 @@ div.blog {
 ::selection {
     color: #0b236d;
     background: #c2a5c3;
+}
+
+div.blog {
+    background-color: #003366;
+    margin: auto;
+    padding: 10px;
+    width: 70%;
+    text-align: center;
+    border-style: outset;
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: #003153;
+    opacity: 70%;
+    font-size: large;
 }
