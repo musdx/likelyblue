@@ -19,7 +19,7 @@ html {
     height: 100%;
     align-content: center;
     margin: 0;
-    font-family: fantasy;
+    font: 22px "Lucida Console", Monaco, monospace;
 }
 div.container {
     background-color: #003366;
