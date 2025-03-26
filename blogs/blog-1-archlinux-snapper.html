@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/assets/icon.png" type="image/png">
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+<div class="blog">
+</head>
+<body>
+        <h1>Archlinux snapper setup</h1>
+        <div class="textcontainer">
+            <p><strong>Warning: If you break your system by blindly copying and pasting commands, it is not my fault.</strong></p>
+<p><strong>This is just my way of doing this. It works for me, but I can't guarantee it will work for you.</strong></p>
+<p>This is a guide to set up Snapper on Arch Linux for Btrfs if you use the Archinstall suggested partition layout. I will walk you through the process of installing Snapper with that layout <strong>ONLY</strong>.</p>
+<h2>Dependencies</h2>
+<ul>
+<li><a href="https://archlinux.org/packages/extra/x86_64/snapper/">snapper</a> (Needed)</li>
+<li><a href="https://aur.archlinux.org/packages/btrfs-assistant/">btrfs-assistant</a> (Recommended)</li>
+<li><a href="https://archlinux.org/packages/?name=snap-pac">snap-pac</a> (Recommended)</li>
+<li><a href="https://archlinux.org/packages/?name=grub-btrfs">grub-btrfs</a> (Optional)</li>
+<li><a href="https://aur.archlinux.org/packages/snap-pac-grub/">snap-pac-grub</a> (Optional)</li>
+<li><a href="https://aur.archlinux.org/packages/refind-btrfs/">refind-btrfs</a> (Optional)</li>
+</ul>
+<p>I usually just install most of them like this:</p>
+<pre><code>yay snapper btrfs-assistant snap-pac grub=btrfs snap-pac-grub
+</code></pre>
+<h2>First step</h2>
+<p>Delete pre-mount snapshots:</p>
+<pre><code>sudo umount /.snapshots
+sudo umount /.snapshots
+</code></pre>
+<p>This is needed because it will allow the user to use Snapper to make a new config.</p>
+<h2>Second step</h2>
+<p>Create a config with Snapper:</p>
+<pre><code>sudo snapper -c root create-config /
+</code></pre>
+<p>Remove existing snapshots:</p>
+<pre><code>sudo btrfs subvolume delete /.snapshots
+sudo mkdir /.snapshots
+</code></pre>
+<p>Mount it:</p>
+<pre><code>sudo mount -a    
+</code></pre>
+<h2>Last step</h2>
+<p>List all subvolume:</p>
+<pre><code>sudo btrfs subvol list /  
+</code></pre>
+<p><img src="https://screenshots.waylonwalker.com/btrfs-subvol-get-default.webp" alt="List of subvolume" />
+<sub>image from <a href="https://waylonwalker.com/setting-up-snapper-on-arch/##sudo+btrfs+subvol+list+/">waylonwalker</a></sub></p>
+<p>Set @ as default:</p>
+<pre><code>sudo btrfs subvol set-default 256 /
+sudo btrfs subvol get-default /  
+</code></pre>
+<p>It should be all good now. If you run into any issues you can try to read the following ressource:</p>
+<ul>
+<li><a href="https://wiki.archlinux.org/title/Snapper">Archwiki</a></li>
+<li><a href="https://waylonwalker.com/setting-up-snapper-on-arch/">waylonwalker</a></li>
+<li><a href="https://www.lorenzobettini.it/2023/03/snapper-and-grub-btrfs-in-arch-linux/">Lorenzo Bettini</a></li>
+</ul>
+
+        </div>
+    <footer>
+        <ul class="horizontal-list">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About Me</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/webring.html">Webring</a></li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>

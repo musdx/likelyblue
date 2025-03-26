@@ -43,6 +43,9 @@ hr {
     border-width: 2px 0 0 0;
     border-color: #B0C4DE;
 }
+img {
+    max-width: 100%;
+}
 img.left {
     padding: 5px;
     width: 150px;
@@ -87,7 +90,7 @@ a.list:hover {
     text-shadow: 1px 1px 2px #002147, 0 0 25px blue, 0 0 5px cyan;
     border-style: outset;
 }
-li {
+li.none {
     list-style: none;
 }
 li.list {
@@ -143,4 +146,15 @@ img.backright {
     z-index: -1;
     width: 150px;
     height: auto;
+}
+code {
+    background-color: #002147;
+}
+pre {
+    padding: 2px;
+    font-size: large;
+    border: #A3B9D1;
+    border-style: dotted;
+    border-width: 3px;
+    background-color: #002147;
 }
