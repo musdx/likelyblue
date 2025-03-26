@@ -9,7 +9,7 @@ html::before {
     background-size: cover;
     background-position: center;
     filter: blur(5px);
-    z-index: -1;
+    z-index: -2;
 }
 html {
     color: #A3B9D1;
@@ -53,7 +53,7 @@ img.left {
 }
 div.textcontainer{
     padding: 10px;
-    text-align: justify;
+    text-align: start;
 }
 footer {
     align-items: center;
@@ -135,4 +135,12 @@ div.blog {
     border-color: #003153;
     opacity: 75%;
     font-size: large;
+}
+img.backright {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    z-index: -1;
+    width: 150px;
+    height: auto;
 }
