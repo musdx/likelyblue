@@ -147,10 +147,16 @@ img.backright {
     width: 150px;
     height: auto;
 }
-code {
-    background-color: #002147;
+pre code {
+    display: block;
+    white-space: nowrap;
+    overflow-x: auto;
+    word-wrap: break-word;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
 }
 pre {
+    width: 100%;
     padding: 2px;
     font-size: large;
     border: #A3B9D1;
