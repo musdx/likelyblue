@@ -6,6 +6,7 @@ html::before {
     right: 0;
     bottom: 0;
     background-image: url('https://usagif.com/wp-content/uploads/gifs/starfall-gif-46.gif');
+    background-color: #313244;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -25,20 +26,23 @@ html {
     align-content: center;
     margin: 0;
     font-family: Gill Sans, sans-serif;
+    padding-top: 3%;
 }
 div.container {
-    background-color: #003366;
+    background-color: rgba(0, 51, 102, 0.1);
     margin: auto;
     padding: 10px;
     width: 60%;
     max-width: 750px;
     text-align: center;
     border-style: outset;
-    border-width: 5px;
-    border-radius: 5px;
-    border-color: #003153;
-    opacity: 70%;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: rgba(0, 49, 83, 0.3);
+    /* opacity: 70%; */
     font-size: large;
+    backdrop-filter: blur(25px);
+    box-shadow: 1px 1px 2px black, 0 0 25px #13274F, 0 0 10px rgba(0, 34, 68, 1);
 }
 h1 {
     text-shadow: 2px 2px 5px #483D8B;
@@ -46,7 +50,7 @@ h1 {
 }
 hr {
     border-width: 2px 0 0 0;
-    border-color: #B0C4DE;
+    border-color: rgba(176, 196, 222, 0.5);
 }
 img {
     max-width: 100%;
@@ -132,17 +136,19 @@ div.blog {
 }
 
 div.blog {
-    background-color: #003366;
+    background-color: rgba(0, 51, 102, 0.1);
     margin: auto;
     padding: 10px;
     width: 75%;
     text-align: center;
     border-style: outset;
-    border-width: 5px;
-    border-radius: 5px;
-    border-color: #003153;
-    opacity: 75%;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: rgba(0, 49, 83, 0.3);
+    /* opacity: 70%; */
     font-size: large;
+    backdrop-filter: blur(25px);
+    box-shadow: 1px 1px 2px black, 0 0 25px #13274F, 0 0 10px rgba(0, 34, 68, 1);
 }
 img.backright {
     position: fixed;
