@@ -13,6 +13,10 @@ html::before {
     z-index: -2;
 }
 html {
+    background-image: url('https://usagif.com/wp-content/uploads/gifs/starfall-gif-46.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: #A3B9D1;
     background-color: #313244;
     background-size: cover;
