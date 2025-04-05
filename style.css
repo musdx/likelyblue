@@ -5,7 +5,7 @@ html::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('https://usagif.com/wp-content/uploads/gifs/starfall-gif-46.gif');
+    background-image: url('assets/starfall.gif');
     background-color: #313244;
     background-size: cover;
     background-position: center;
@@ -14,7 +14,7 @@ html::before {
     z-index: -2;
 }
 html {
-    background-image: url('https://usagif.com/wp-content/uploads/gifs/starfall-gif-46.gif');
+    background-image: url('assets/starfall.gif');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -182,4 +182,4 @@ pre {
 ::-webkit-scrollbar-thumb:hover {
     background: #0b236d;
     scrollbar-shadow-color: #A3B9D1;
-  }
+}
