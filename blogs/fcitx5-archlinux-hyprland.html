@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/assets/icon.png" type="image/png">
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fcitx5 archlinux hyprland setup</title>
+<div class="blog">
+</head>
+<body>
+        <h1>fcitx5 archlinux hyprland setup</h1>
+        <div class="textcontainer">
+            <p><sub><sub>11 April 2025</sub></sub></p>
+<p>I recently reinstalled my Arch Linux installation. This means that I will need to set up Fcitx5 on Hyprland again soon. To prepare for this, I've decided to research and reinstall simultaneously. This blog post documents the results of my research.</p>
+<h3>1: Install it</h3>
+<blockquote>
+<p>Note: By itself, fcitx5 has only a basic framework that just gives English support. If you want to input other languages, such as Chinese or Japanese, you need an Input Method Engine (IME). See Input method#List of available input method editors for a list of available IMEs.</p>
+</blockquote>
+<p><sub><a href="https://wiki.archlinux.org/title/Fcitx5">Source</a></sub></p>
+<pre><code>pacman -S fcitx5-im
+</code></pre>
+<p>fcitx5-im will install the following package:</p>
+<ul>
+<li>fcitx5</li>
+<li>fcitx5-configtool</li>
+<li>fcitx5-gtk</li>
+<li>fcitx5-qt</li>
+</ul>
+<p>I will also install fcitx5-unikey so I can type Vietnamese.</p>
+<pre><code>pacman -S fcitx5-unikey
+</code></pre>
+<h3>2: Env setup</h3>
+<p>In my case, I am using Hyprland, so I will put the env in the Hyprland config.</p>
+<pre><code>env = GTK_IM_MODULE,fcitx5
+env = QT_IM_MODULE,fcitx5
+env = XMODIFIERS,@im=fcitx5
+</code></pre>
+<p>This may work for others:</p>
+<pre><code>GTK_IM_MODULE=fcitx5
+QT_IM_MODULE=fcitx5
+XMODIFIERS="@im=fcitx5"
+</code></pre>
+<h3>3: Run it on boot</h3>
+<p>How to do this depends on your distro. I can't tell you exactly how.</p>
+<p>Here's a list of guides for some popular DE, though:</p>
+<ul>
+<li><a href="https://userbase.kde.org/System_Settings/Autostart">KDE Plasma</a></li>
+<li><a href="https://help.gnome.org/users/gnome-help/stable/shell-apps-auto-start.html.en">Gnome</a></li>
+<li><a href="https://winaero.com/manage-startup-apps-linux-mint/">Cinnamon</a></li>
+</ul>
+<h3>Bonus(aka Electron issues):</h3>
+<p>I <del>hate</del> <em>love</em> Electron apps since the day that I use linux. Especially when I'm dealing with Electron apps on Wayland, things <em>totally</em> work perfectly. Like, without any issues! It is like a bless to my poor soul.</p>
+<p>Good luck. You'll probably need it.</p>
+<ul>
+<li><a href="https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland#Chromium_.2F_Electron">fcitx5 docs</a></li>
+<li><a href="https://wiki.archlinux.org/title/Chromium#Native_Wayland_support">Archwiki</a></li>
+</ul>
+
+        </div>
+    <footer>
+        <ul class="horizontal-list">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About Me</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/webring.html">Webring</a></li>
+        </ul>
+    </footer>
+    <!-- Gitcus -->
+        <script src="https://giscus.app/client.js"
+            data-repo="musdx/likelyblue"
+            data-repo-id="R_kgDOOOtYNA"
+            data-category="General"
+            data-category-id="DIC_kwDOOOtYNM4Co6KG"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="top"
+            data-theme="transparent_dark"
+            data-lang="en"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <!-- Gitcus -->
+</div>
+</body>
+</html>
