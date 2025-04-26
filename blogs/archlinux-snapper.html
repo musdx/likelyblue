@@ -24,7 +24,7 @@
 <li><a href="https://aur.archlinux.org/packages/refind-btrfs/">refind-btrfs</a> (Optional)</li>
 </ul>
 <p>I usually just install most of them like this:</p>
-<pre><code>yay snapper btrfs-assistant snap-pac grub=btrfs snap-pac-grub
+<pre><code>yay snapper btrfs-assistant snap-pac grub-btrfs snap-pac-grub
 </code></pre>
 <h2>First step</h2>
 <p>Delete pre-mount snapshots:</p>
@@ -41,17 +41,17 @@ sudo rm -r /.snapshots
 sudo mkdir /.snapshots
 </code></pre>
 <p>Mount it:</p>
-<pre><code>sudo mount -a    
+<pre><code>sudo mount -a
 </code></pre>
 <h2>Last step</h2>
 <p>List all subvolume:</p>
-<pre><code>sudo btrfs subvol list /  
+<pre><code>sudo btrfs subvol list /
 </code></pre>
 <p><img src="https://screenshots.waylonwalker.com/btrfs-subvol-get-default.webp" alt="List of subvolume" />
 <sub>image from <a href="https://waylonwalker.com/setting-up-snapper-on-arch/##sudo+btrfs+subvol+list+/">waylonwalker</a></sub></p>
 <p>Set @ as default:</p>
 <pre><code>sudo btrfs subvol set-default 256 /
-sudo btrfs subvol get-default /  
+sudo btrfs subvol get-default /
 </code></pre>
 <p>It should be all good now. If you run into any issues, you can try reading the following resource:</p>
 <ul>
