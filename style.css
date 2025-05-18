@@ -101,14 +101,10 @@ a.list:hover {
 li.none {
     list-style: none;
 }
-li.list {
+div.list {
     font-size: 24px;
     text-align: center;
-    list-style: none;
     padding: 5px;
-}
-li.list div {
-    padding-bottom: 10px;
 }
 div.blog {
     background-color: #003366;
