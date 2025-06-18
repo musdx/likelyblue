@@ -117,7 +117,7 @@ div.blog {
     border-width: 5px;
     border-radius: 5px;
     border-color: #003153;
-    opacity: 70%;
+    opacity: 100%;
     font-size: large;
 }
 ::-moz-selection { /* Code for Firefox */
